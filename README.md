@@ -13,6 +13,9 @@
 
 ## 使い方をざっくり説明
 
+- 指定のポケモンをダウンロード
+- ポケモンをｎ匹ダウンロード
+
 
 ## 押しポイント
 
@@ -25,6 +28,11 @@
     - 
 
 ## ちょっと詳しい説明
+
+
+## 参照：
+- [Welcome to Click — Click Documentation (8.0.x)](https://click.palletsprojects.com/en/8.0.x/)
+- [AIOHTTP Client デモ — AIOHTTPハンズオン ドキュメント](https://aiohttp-hands-on.readthedocs.io/ja/latest/aiohttp_client_demo.html)
 
 
 

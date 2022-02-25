@@ -1,0 +1,6 @@
+click
+aiohttp
+logzero
+isort 
+black 
+flake8
