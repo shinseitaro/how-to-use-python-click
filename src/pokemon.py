@@ -1,4 +1,5 @@
 import os
+import random
 import asyncio
 import aiohttp
 from logzero import logger
@@ -29,7 +30,7 @@ async def download_pokemons_randomly(n, save_dir):
 
     async with aiohttp.ClientSession() as session:
         tasks = list()
-        for num in range(1, n):
+        for num in random.sample(range(1, 800), n):
             url = f"https://pokeapi.co/api/v2/pokemon/{num}"
             png_path = os.path.join(save_dir, f"{num}.png")
             tasks.append(asyncio.create_task(get_pokemon(session, url, png_path)))

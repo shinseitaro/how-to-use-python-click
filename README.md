@@ -15,6 +15,7 @@
 
 - 指定のポケモンをダウンロード
 - ポケモンをｎ匹ダウンロード
+- [ポケモンの単位って何？１体？１匹？ - ふと気になって質問してみまし... - Yahoo!知恵袋](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1444131164)
 
 
 ## 押しポイント
