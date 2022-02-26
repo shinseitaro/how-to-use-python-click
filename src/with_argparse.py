@@ -1,28 +1,27 @@
 import argparse
-from ast import parse
 import asyncio
 import random
 import pokemon
-
-# てきとうに一匹、デフォルトの場所に
-# てきとうに一匹、指定の場所に
-# 指定の一匹、デフォルトの場所に
-# 指定の一匹、指定の場所に
-# 同上をてきとうな、ｎ匹にも
 
 
 def main():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-r", "--random", help="ポケモンを適当に1匹ゲットします", action="store_true")
     parser.add_argument(
-        "-i", "--id", help="ポケモンIDを指定",
+        "-r", "--random", help="ランダムに選んだポケモンを1匹ゲットします", action="store_true"
     )
     parser.add_argument(
-        "-d", "--savedir", help="保存先を指定",
+        "-i",
+        "--id",
+        help="ポケモンIDを指定",
     )
-    parser.add_argument("--get10", help="ポケモンを適当に10匹ゲットします", action="store_true")
-    parser.add_argument("--getmany", help="ポケモンを適当に指定された数ゲットします。-d で保存先を指定可")
+    parser.add_argument(
+        "-d",
+        "--savedir",
+        help="保存先を指定",
+    )
+    parser.add_argument("--get10", help="ランダムに選んだポケモンを10匹ゲットします", action="store_true")
+    parser.add_argument("--getmany", help="指定された数だけランダムにポケモンゲットします。-d で保存先を指定可")
 
     args = parser.parse_args()
     default_savedir = "./pokemons"

@@ -37,8 +37,3 @@ async def download_pokemons_randomly(n, save_dir):
 
         for pokemon in asyncio.as_completed(tasks):
             await pokemon
-
-
-# asyncio.run(download_a_pokemon(20, "/tmp/pokemon"))
-# asyncio.run(download_pokemons_randomly(1000, "/tmp/pokemon"))
-

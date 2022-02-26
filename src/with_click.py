@@ -12,32 +12,21 @@ def cli():
     pass
 
 
-@cli.command(help=f"ランダムに選んだポケモンを1匹ゲットします。保存先は {default_savedir} です。")
-def get_a_pokemon():
-    n = random.randint(1, 800)
-    asyncio.run(pokemon.download_a_pokemon(n, default_savedir))
-
-
-@cli.command(help="ランダムに選んだポケモンを10匹ゲットします")
-def get_10_pokemons():
-    asyncio.run(pokemon.download_pokemons_randomly(10, default_savedir))
-
-
-@cli.command(help="指定されたID番号のポケモンをゲットします. ")
+@cli.command(help=f"ランダムに選んだポケモンを1匹ゲットします。")
+@click.option("--id", default=random.randint(1, 800), help="ID で指定したポケモンを取得します")
 @click.option(
     "--savedir", default=default_savedir, help=f"保存先を指定。デフォルトは {default_savedir} です。"
 )
-@click.argument("id")
-def get_pokemon(id, savedir):
+def get_a_pokemon(id, savedir):
     asyncio.run(pokemon.download_a_pokemon(id, savedir))
 
 
-@cli.command(help="指定された数だけランダムにポケモンゲットします。")
+@cli.command(help="ランダムに選んだポケモンを指定数匹ゲットします。デフォルトは10匹です。")
+@click.option("--num", default=10, help="ゲットするポケモンの数を指定。指定しなければ10匹ゲットします")
 @click.option(
     "--savedir", default=default_savedir, help=f"保存先を指定。デフォルトは {default_savedir} です。"
 )
-@click.argument("num")
-def get_many_pokemons(num, savedir):
+def get_pokemons(num, savedir):
     asyncio.run(pokemon.download_pokemons_randomly(num, savedir))
 
 
