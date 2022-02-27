@@ -90,7 +90,7 @@ if __name__ == "__main__":
 python run.py hello
 ```
 
-これですよこれ。こういうのでいいんですよ。
+[これですよこれ。こういうのでいいんですよ。](https://dic.nicovideo.jp/a/%E3%81%93%E3%81%86%E3%81%84%E3%81%86%E3%81%AE%E3%81%A7%E3%81%84%E3%81%84%E3%82%93%E3%81%A0%E3%82%88%E3%81%93%E3%81%86%E3%81%84%E3%81%86%E3%81%AE%E3%81%A7)
 
 
  <img src="https://livedoor.blogimg.jp/pom2-pom2/imgs/4/5/45470528.jpg" width="30%">    
